@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt2Video AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🎬 Prompt2Video AI</div>
+    <span class="badge">AI VIDEO GENERATOR</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Create videos from a prompt or website</h1>
+      <p>Describe your video, or paste a public webpage URL and turn its content into a video project.</p>
+    </section>
+
+    <section class="card">
+      <label for="prompt">Video prompt</label>
+      <textarea id="prompt" placeholder="Example: Create a 30-second cinematic video about a young entrepreneur starting a grocery delivery business in Lagos."></textarea>
+
+      <label for="url">Website URL <span>(optional)</span></label>
+      <input id="url" type="url" placeholder="https://example.com/article">
+
+      <div class="row">
+        <div>
+          <label for="duration">Duration</label>
+          <select id="duration">
+            <option value="10">10 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="30" selected>30 seconds</option>
+            <option value="60">60 seconds</option>
+          </select>
+        </div>
+        <div>
+          <label for="format">Format</label>
+          <select id="format">
+            <option value="9:16" selected>9:16 — TikTok/Reels</option>
+            <option value="16:9">16:9 — YouTube</option>
+            <option value="1:1">1:1 — Square</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generate">✨ Generate AI Video</button>
+      <p id="message"></p>
+    </section>
+
+    <section id="result" class="card hidden">
+      <h2>Your video</h2>
+      <video id="video" controls></video>
+      <a id="download" class="download" download>⬇ Download video</a>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
